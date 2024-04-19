@@ -16,3 +16,12 @@ with open('csigak.txt', 'r', encoding='UTF-8') as bemenet:
         
 print(f"{len(csigak)} db csiga van a file-ban.")
 
+szamlalo = 0
+
+db = 0
+
+for i in range(len(csigak)):
+    if 'meztelen' in csigak[i]['magyar'] and 'fél' not in csigak[i]['magyar']:
+        db += 1
+        
+print(f"{db} db meztelen csiga van az adatok között.")
